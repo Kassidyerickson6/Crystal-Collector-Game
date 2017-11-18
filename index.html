@@ -4,33 +4,19 @@
 	<meta charset="UTF-8">
 	<title>Crystal Collector</title>
 
+		<!--link the reset.css file first, then bootstrap, then style.css. This prevents over-riding. Google fonts link last. -->
 		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
   
   		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-		<style>
-		@import url('https://fonts.googleapis.com css?family=Indie+Flower|Saira+Extra+Condensed');
-		</style>
+		<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Saira+Extra+Condensed|Vollkorn+SC" rel="stylesheet">
 
 
 
 </head>
 <body>
-
-<div class = "container-fluid">
-
-		<div class = "row">
-
-			
-			<div class="col-md-8">
-
-				<img src="assets/images/crystalbanner.jpg" img class="center-block" alt="Kassidy Erickson" class="img-responsive" height="100%" width="150%"> 
-
-			</div>
-		</div>
-	</div>
 
 	<div class="container">
 		<div class="row">
@@ -39,10 +25,10 @@
 					<h1> CRYSTAL COLLECTOR </h1>
 					<br>
 					<br>
+					<!--Instructions for the game. No js involved. -->
+					<h2> Instructions:</h2>
 
-					<h3> Instructions:</h3>
-
-					<h5><ul> You will be given a random number at the start of the game </ul>
+					<h4><ul> You will be given a random number at the start of the game </ul>
 
 					<ul> By clicking on one of the four crystals below, you will add a specific amount of points to your score. </ul>
 
@@ -50,7 +36,7 @@
 
 					<ul> Note: the value of each crystal is hidden until you click on it. </ul>
 
-					<ul> Each time you start a new game, the random number and the values of the crystals will change. </ul></h5>
+					<ul> Each time you start a new game, the random number and the values of the crystals will change. </ul></h4>
 
 				</center>
 				<br>
@@ -62,8 +48,9 @@
 		<div class="row">
 
 			<div class="col-md-6 well">
-				<center><h3> Random Number: </h3>
-					<h2 id="randomNumber"></h2></center>
+				<!--This is where the random number will show. -->
+				<center><h3> Random Number:</h3> 
+					 <h2><div class="randomNumber"></div></h2></center> 
 					<br>
 					<br>
 					<br>
@@ -73,20 +60,27 @@
 
 			<div class="col-md-4 well">
 				<center>
+
+					<!-- this is where the wins and losses will update on the page -->
 					 <h3> 
-					 	<p>Wins: </p>
-						<p> Losses: </p>
+					 	<p>Wins:<div id="wins"></div></p>
+						<p> Losses:<div id="losses"></div> </p>
 					</h3> 
 				</center>
+					</div>
+				</div>
 			</div>
 		</div>
 
 		<div class="row">
 
+			<!-- these are the images, each with an assigned ID to use in js -->
+
 			<div class="col-md-3">
 				<center>
 
-				<img src="assets/images/crystals1.jpg" alt="crystal1" class="img-responsive" height="50%" width="50%">
+
+				<img src="assets/images/crystals1.jpg" alt="crystal1"  id="purple" height="50%" width="50%">
 
 				</center>
 			</div>
@@ -94,7 +88,7 @@
 			<div class="col-md-3">
 				<center>
 
-				<img src="assets/images/crystals2.jpg" alt="crystal2" class=img-responsive height="50%" width="50%">
+				<img src="assets/images/crystals2.jpg" alt="crystal2" 	id="blue" height="50%" width="50%">
 
 				</center>
 			</div>
@@ -102,7 +96,7 @@
 			<div class="col-md-3">
 				<center>
 
-				<img src="assets/images/crystals3.jpg" alt="crystal3" class=img-responsive height="50%" width="50%">
+				<img src="assets/images/crystals3.jpg" alt="crystal3"  id="green" height="50%" width="50%">
 
 				</center>
 			</div>
@@ -110,10 +104,12 @@
 			<div class="col-md-3">
 				<center>
 
-				<img src="assets/images/crystals4.jpg" alt="crystal4" class=img-responsive height="50%" width="50%">
+				<img src="assets/images/crystals4.jpg" alt="crystal4"  id="pink" height="50%" width="50%">
 
 				</center>
 			</div>
+		</div>
+		</div>
 
 		</div>
 	
@@ -122,15 +118,18 @@
 				<br>
 				<br>
 				<center>
-					<h3> Total Score: </h3>
-					<h3 id="totalScore"></h3>
+					<!-- this is where the user's score will add up on the page. The assigned class will be used in js -->
+					<h2> Your Score: </h2>
+
+						<h2><div class="userScore"></h2> 
+				</div>
 				</center>
 				<br>
 				<br>
 			</div>
 		</div>
 	</div>
-	
+
 
 
 
@@ -138,10 +137,6 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script src="./assets/javascript/game.js"></script>
-
-
-
-	
 
 
 </body>
