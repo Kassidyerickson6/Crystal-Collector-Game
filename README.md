@@ -1,6 +1,5 @@
 # Crystal Collector Game
-*The concept of this game is for the user to click on a combination of the 4 given crystals to add up to a score that matches the random generated number.
-*This game was made using HTML, CSS, Javascript, and jQuery
+*The concept of this game is for the user to click on a combination of the 4 given crystals to add up to a score that matches the random generated number. This game was made using HTML, CSS, Javascript, and jQuery
 
 ## Author
 Kassidy Erickson
